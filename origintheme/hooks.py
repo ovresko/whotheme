@@ -25,6 +25,7 @@ app_include_js = [
     "/assets/origintheme/js/origintheme.js",
     "/assets/origintheme/js/custom.js",
     "/assets/js/origintheme-template.min.js",
+    "//use.edgefonts.net/league-gothic.js"
 ]
 
 # include js, css files in header of web template
