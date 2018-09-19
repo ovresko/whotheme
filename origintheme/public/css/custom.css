@@ -95,7 +95,6 @@ input.form-control::-moz-placeholder {
     /* display: block; */
     top: 81px;
     z-index: 5;
-    border-left: 1px dotted #d6d6d6;
 }
 
 .page-content {
@@ -494,7 +493,15 @@ h6.uppercase,
     border-bottom: 1px solid #ffffff;
 }
 
-.list-item--head {
+.list-row-head {
+    background-color: #fcfcfc;
+    border-bottom: 1px solid #d1d8dd !important;
+}
+.list-row:hover {
+    background-color: #eeffec;
+}
+
+.list-item-head {
     background-color: #f0f0f04f;
     border-bottom: 1px solid #d6d6d6;
     cursor: auto;
@@ -625,9 +632,8 @@ input[type="checkbox"]:before {
     -webkit-transition: 150ms color;
     -o-transition: 150ms color;
     transition: 150ms color;
-    background-color: #eaeaea;
     padding: 1px;
-    margin: -1px;
+    margin: 1px;
 
 /* .inline-graph {
     
