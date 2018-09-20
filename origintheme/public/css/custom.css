@@ -91,8 +91,7 @@ input.form-control::-moz-placeholder {
     border-bottom: 1px dotted #d6d6d6;
     left: 80px;
     right: 15px;
-    margin: auto;
-    /* display: block; */
+    margin: 0 15px;
     top: 81px;
     z-index: 5;
 }
@@ -440,7 +439,6 @@ h6.uppercase,
     margin-bottom: 60px;
     margin-left: 0px;
     padding-left: 0px;
-    padding-top: 15px;
 }
 
 .grid-heading-row {
@@ -590,6 +588,11 @@ fieldset[disabled] .btn-primary.active {
     border-radius: 4px 4px 0 0;
 }
 
+.page-title {
+    position: relative;
+    padding: 0;
+}
+
 .page-title .title-text {
     margin-right: 7px;
     max-width: 75%;
@@ -610,12 +613,6 @@ label {
     margin-bottom: 0px;
 }
 
-input[type="radio"], input[type="checkbox"] {
-    margin: 0;
-    height: auto;
-    bottom: 1px;
-}
-
 input[type="checkbox"]:before {
     position: absolute;
     font-family: 'FontAwesome';
@@ -628,12 +625,18 @@ input[type="checkbox"]:before {
     line-height: 14px;
     display: inline-block;
     font-size: 14px;
-    color: #a5a8a8;
     -webkit-transition: 150ms color;
     -o-transition: 150ms color;
     transition: 150ms color;
-    padding: 1px;
-    margin: 1px;
+    margin-top: 1px;
+
+}
+
+input[type="checkbox"]:checked:before {
+    content: '\f14a';
+    font-size: 13px;
+    color: #edc35f;
+  }
 
 /* .inline-graph {
     

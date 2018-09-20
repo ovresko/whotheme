@@ -70,11 +70,7 @@
   border-bottom: 1px solid #e4e4e4;
 }
 
-.filter-list .sort-selector {
-  position: absolute;
-  top: 15px;
-  right: 0;
-}
+
 
 li.user-progress .progress-chart {
   width: 50px;
