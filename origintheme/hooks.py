@@ -46,7 +46,7 @@ on_session_creation = "origintheme.api.on_session_creation"
 # ----------
 website_context = {
 	"favicon": 	"/assets/origintheme/images/favicon.png",
-	"splash_image": "/assets/origintheme/images/icon.svg"
+	"splash_image": "/assets/origintheme/images/splash.png"
 }
 # application home page (will override Website Settings)
 # home_page = "login"

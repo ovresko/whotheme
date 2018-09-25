@@ -24,7 +24,7 @@
 
 html {
     background-color: #d0d0d0;
-    padding: 15px;
+    padding: 0px 15px 15px 15px;
 }
 
 .page-title h1 {
@@ -87,12 +87,17 @@ input.form-control::-moz-placeholder {
 /* .main-section{ background: #222d32} */
 
 .page-head {
-    position: static;
-    border-bottom: none;
+    position: fixed;
+    border-bottom: 1px dotted #d6d6d6;
+    left: 80px;
+    right: 15px;
+    margin: 0 15px;
+    top: 81px;
+    z-index: 5;
 }
 
 .page-content {
-    margin-top: 0
+    margin-top: 150px;
 }
 
 header .container {
@@ -110,7 +115,7 @@ header .container {
 
 @media (min-width: 768px) {
     .container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
-        margin: 18px 20px;
+        margin: 18px 15px;
     }
 }
 
@@ -297,6 +302,7 @@ header .dropdown-help {
 
 .layout-side-section {
     font-size: 13px;
+    padding: 15px;
 }
 
 @media (min-width: 768px) {
@@ -395,12 +401,13 @@ h6.uppercase,
 }
 
 .page-form {
-    margin: 0px;
+    margin-bottom: 15px;
     padding-right: 15px;
     padding-top: 10px;
     border-bottom: none;
     background-color: #eaeaea;
     border-radius: 25px;
+    margin-top: 15px;
 }
 
 .form-inner-toolbar {
@@ -426,6 +433,12 @@ h6.uppercase,
     border-left: 1px dotted #d6d6d6;
     border-top: 0px;
     padding: 0 0 0 25px;
+}
+
+.layout-main-section-wrapper {
+    margin-bottom: 60px;
+    margin-left: 0px;
+    padding-left: 0px;
 }
 
 .grid-heading-row {
@@ -478,7 +491,15 @@ h6.uppercase,
     border-bottom: 1px solid #ffffff;
 }
 
-.list-item--head {
+.list-row-head {
+    background-color: #fcfcfc;
+    border-bottom: 1px solid #d1d8dd !important;
+}
+.list-row:hover {
+    background-color: #eeffec;
+}
+
+.list-item-head {
     background-color: #f0f0f04f;
     border-bottom: 1px solid #d6d6d6;
     cursor: auto;
@@ -567,6 +588,11 @@ fieldset[disabled] .btn-primary.active {
     border-radius: 4px 4px 0 0;
 }
 
+.page-title {
+    position: relative;
+    padding: 0;
+}
+
 .page-title .title-text {
     margin-right: 7px;
     max-width: 75%;
@@ -587,11 +613,30 @@ label {
     margin-bottom: 0px;
 }
 
-input[type="radio"], input[type="checkbox"] {
-    margin: 0;
-    height: auto;
-    bottom: 1px;
+input[type="checkbox"]:before {
+    position: absolute;
+    font-family: 'FontAwesome';
+    content: '\f096';
+    visibility: visible;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 14px;
+    display: inline-block;
+    font-size: 14px;
+    -webkit-transition: 150ms color;
+    -o-transition: 150ms color;
+    transition: 150ms color;
+    margin-top: 1px;
+
 }
+
+input[type="checkbox"]:checked:before {
+    content: '\f14a';
+    font-size: 13px;
+    color: #edc35f;
+  }
 
 /* .inline-graph {
     
