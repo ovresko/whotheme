@@ -2,6 +2,17 @@ $(document).ready(function() {
 
 	//console.log("Current user",frappe.utils.user);
 
+	function handle_mobile() {
+		window.location.href = '/me';
+	}
+
+	if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		handle_mobile();
+	}
+	$(window).bind('hashchange', function() {
+		handle_mobile();
+	});
+
 	frappe.call({
 		method: "origintheme.api.get_sidebar_template",
 		args: {
@@ -12,7 +23,7 @@ $(document).ready(function() {
 			temp = 'main-sidebar';
 		}
 		try {
-			$('.main-section').append(frappe.render_template(temp));	
+			$('.main-section').append(frappe.render_template(temp));
 		} catch(err) {
 			$('.main-section').append(frappe.render_template("main-sidebar"));
 		}
@@ -33,14 +44,14 @@ $(document).ready(function() {
 	$('#toolbar-user [href*="#background_jobs"]').addClass('hidden');
 	// $('.dropdown-navbar-new-comments').addClass('hidden');
 	$('header .navbar').removeClass('navbar-fixed-top');
-	
+
 	// $('#navbar-breadcrumbs').addClass('hidden');
 	$('.navbar-home').addClass('hidden');
-	$('body').addClass('skin-origin sidebar-mini sidebar-collapse');	
+	$('body').addClass('skin-origin sidebar-mini sidebar-collapse');
 	$('#body_div').addClass('content-wrapper');
-	
+
 	origintheme.set_user_background();
-	
+
 });
 
 // $('.page-container').on('load', function() {
