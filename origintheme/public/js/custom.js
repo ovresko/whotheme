@@ -3,12 +3,12 @@ $(document).ready(function() {
 	//console.log("Current user",frappe.utils.user);
 
 	function handle_mobile() {
-		window.location.href = '/me';
+		if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			window.location.href = '/me';
+		}
 	}
 
-	if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		handle_mobile();
-	}
+	handle_mobile();
 	$(window).bind('hashchange', function() {
 		handle_mobile();
 	});
