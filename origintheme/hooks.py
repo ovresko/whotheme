@@ -32,7 +32,8 @@ web_include_css = "/assets/origintheme/css/origintheme-web.css"
 # web_include_js = "/assets/origintheme/js/origintheme.js"
 
 # login
-on_session_creation = "origintheme.api.on_session_creation"
+# on_session_creation = "origintheme.api.on_session_creation"
+boot_session = "origintheme.api.boot_session"
 
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
@@ -133,4 +134,3 @@ website_context = {
 # override_whitelisted_methods = {
 # 	"frappe.desk.doctype.event.event.get_events": "origintheme.event.get_events"
 # }
-

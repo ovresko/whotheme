@@ -7,6 +7,14 @@ import pprint
 pp = pprint.PrettyPrinter(indent=4)
 
 def on_session_creation(login_manager):
+	print "On session create called"
+	info = frappe.db.get_value("User", frappe.local.session_obj.user,
+			["home_page_link"], as_dict=1)
+
+	frappe.local.response["home_page"] = info.home_page_link or "/desk"
+
+def boot_session(bootinfo):
+	print "Boot session called"
 	info = frappe.db.get_value("User", frappe.local.session_obj.user,
 			["home_page_link"], as_dict=1)
 
