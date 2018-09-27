@@ -152,7 +152,7 @@ origintheme.set_user_background = function(src, selector, style){
 // 	}));
 // }
 
-frappe.templates["logo"] = '<a href="/desk#List/Customer/List" class="logo">'
+frappe.templates["logo"] = '<a href="/desk#/" class="logo">'
 +     ' <span class="logo-mini"><b>or</b></span>'
 +'      <span class="logo-lg"><b>Origin Aquatech</b></span>'
 +'    </a>';
