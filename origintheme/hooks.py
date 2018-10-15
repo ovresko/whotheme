@@ -141,5 +141,8 @@ fixtures = [
     },
     {
         "dt": "Portal Settings"
+    },
+    {
+        "dt": "Website Settings"
     }
 ]
