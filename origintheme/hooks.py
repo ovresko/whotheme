@@ -45,8 +45,8 @@ on_session_creation = "origintheme.api.on_session_creation"
 # Home Pages
 # ----------
 website_context = {
-	"favicon": 	"/assets/origintheme/images/favicon.png",
-	"splash_image": "/assets/origintheme/images/splash.png"
+    "favicon": 	"/assets/origintheme/images/favicon.png",
+    "splash_image": "/assets/origintheme/images/splash.png"
 }
 # application home page (will override Website Settings)
 # home_page = "login"
@@ -133,3 +133,13 @@ website_context = {
 # override_whitelisted_methods = {
 # 	"frappe.desk.doctype.event.event.get_events": "origintheme.event.get_events"
 # }
+
+fixtures = [
+    {
+        "dt": "Website Theme",
+        "filters": [["name", "in", ["Origin Theme"]]]
+    },
+    {
+        "dt": "Portal Settings"
+    }
+]
