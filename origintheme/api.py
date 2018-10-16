@@ -14,9 +14,12 @@ from frappe.utils import flt
 def on_session_creation(login_manager):
 	print "On session create called"
 	info = frappe.db.get_value("User", frappe.local.session_obj.user,
-			["home_page_link"], as_dict=1)
+			["home_page_link", "user_type"], as_dict=1)
 
-	frappe.local.response["home_page"] = info.home_page_link or "/desk"
+	if info.user_type == 'System User':
+		frappe.local.response["home_page"] = info.home_page_link or "/desk"
+	else:
+		frappe.local.response["home_page"] = '/products'
 
 @frappe.whitelist()
 def get_sidebar_template():
