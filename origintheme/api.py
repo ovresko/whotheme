@@ -9,6 +9,7 @@ pp = pprint.PrettyPrinter(indent=4)
 from erpnext.shopping_cart.doctype.shopping_cart_settings.shopping_cart_settings import get_shopping_cart_settings
 from frappe.utils.nestedset import get_root_of
 from frappe import throw, _
+from frappe.utils import flt
 
 def on_session_creation(login_manager):
 	print "On session create called"
@@ -36,6 +37,81 @@ def place_order():
 		# company used to create customer accounts
 		frappe.defaults.set_user_default("company", quotation.company)
 
+@frappe.whitelist()
+def get_item_price(item_code):
+	customer = user_to_customer(frappe.session.user)
+	if customer is None:
+		return None
+	customer = frappe.get_doc('Customer', customer)
+
+	today = frappe.utils.nowdate()
+
+	shopping_cart_settings = frappe.get_doc('Shopping Cart Settings', 'Shopping Cart Settings')
+
+	price = frappe.get_all("Item Price", fields=["price_list_rate", "currency"],
+			filters={"price_list": shopping_cart_settings.price_list, "item_code": item_code})
+	if not price:
+		return None
+	price = price[0]
+
+	pricing_rules = frappe.db.sql(""" SELECT * FROM
+		`tabPricing Rule`
+		WHERE apply_on='Item Code'
+		AND item_code = %(item_code)s
+		AND applicable_for = 'Customer'
+		AND customer = %(customer)s
+		AND (valid_from IS NULL OR valid_from <= %(today)s)
+		AND (valid_upto IS NULL OR valid_upto >= %(today)s)
+		ORDER BY priority DESC;
+		""", {
+		"item_code": item_code,
+		"customer": customer.name,
+		"today": today}, as_dict=1)
+
+	if pricing_rules and len(pricing_rules) > 0:
+		pricing_rule = pricing_rules[0]
+		if pricing_rule['price_or_discount'] == "Discount Percentage":
+			price['price_list_rate'] = flt(price['price_list_rate'] * (1.0 - (pricing_rule['discount_percentage'] / 100.0)))
+		if pricing_rule['price_or_discount'] == "Price":
+			price['price_list_rate'] = pricing_rule['price']
+
+	item = frappe.get_doc('Item', item_code)
+
+	price['stock_uom'] = item.stock_uom
+
+	if price['price_list_rate']:
+		return price
+
+	return None
+
+
+
+
+
+
+def user_to_customer(user):
+	"""
+	Accepts name of user, returns name of coresponding customer_name
+	"""
+	user = frappe.get_doc('User', user)
+	is_customer = False
+	for role in user.roles:
+		if role.role == 'Customer':
+			is_customer = True
+	if not is_customer:
+		return None
+	contacts = frappe.get_all('Contact',
+		filters={
+			"user": user.name
+		},
+		fields=['name'])
+
+	for contact in contacts:
+		contact = frappe.get_doc('Contact', contact['name'])
+		for link in contact.links:
+			if link.link_doctype == 'Customer':
+				return link.link_name
+	return None
 
 def _get_cart_quotation(party=None):
 	'''Return the open Quotation of type "Shopping Cart" or make a new one'''
