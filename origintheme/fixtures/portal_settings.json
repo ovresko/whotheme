@@ -15,7 +15,7 @@
     "role": "Customer", 
     "route": "/quotations", 
     "target": null, 
-    "title": "Quotations"
+    "title": "Purchase Orders"
    }, 
    {
     "enabled": 1, 
@@ -23,7 +23,7 @@
     "role": "Customer", 
     "route": "/orders", 
     "target": null, 
-    "title": "Orders"
+    "title": "Approved Orders"
    }, 
    {
     "enabled": 1, 
@@ -200,7 +200,7 @@
     "title": "Newsletter"
    }
   ], 
-  "modified": "2018-10-17 11:11:30.203472", 
+  "modified": "2018-10-17 15:51:07.676072", 
   "name": "Portal Settings"
  }
 ]
