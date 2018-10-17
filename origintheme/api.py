@@ -40,6 +40,8 @@ def place_order():
 		# company used to create customer accounts
 		frappe.defaults.set_user_default("company", quotation.company)
 
+	return quotation.name
+
 @frappe.whitelist()
 def get_item_price(item_code):
 	customer = user_to_customer(frappe.session.user)

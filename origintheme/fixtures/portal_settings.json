@@ -5,7 +5,7 @@
     "enabled": 1, 
     "reference_doctype": null, 
     "role": "Customer", 
-    "route": "products", 
+    "route": "/products", 
     "target": null, 
     "title": "Products"
    }, 
@@ -13,7 +13,7 @@
     "enabled": 1, 
     "reference_doctype": "Quotation", 
     "role": "Customer", 
-    "route": "quotes", 
+    "route": "/quotations", 
     "target": null, 
     "title": "Quotations"
    }, 
@@ -21,7 +21,7 @@
     "enabled": 1, 
     "reference_doctype": "Sales Order", 
     "role": "Customer", 
-    "route": "orders", 
+    "route": "/orders", 
     "target": null, 
     "title": "Orders"
    }, 
@@ -29,7 +29,7 @@
     "enabled": 1, 
     "reference_doctype": "Delivery Note", 
     "role": "Customer", 
-    "route": "shipments", 
+    "route": "/shipments", 
     "target": null, 
     "title": "Shipments"
    }, 
@@ -37,7 +37,7 @@
     "enabled": 1, 
     "reference_doctype": "Sales Invoice", 
     "role": "Customer", 
-    "route": "invoices", 
+    "route": "/invoices", 
     "target": null, 
     "title": "Invoices"
    }, 
@@ -45,7 +45,7 @@
     "enabled": 1, 
     "reference_doctype": "Lead", 
     "role": "Sales User", 
-    "route": "lead", 
+    "route": "/lead", 
     "target": null, 
     "title": "Leads"
    }
@@ -200,7 +200,7 @@
     "title": "Newsletter"
    }
   ], 
-  "modified": "2018-10-15 11:43:34.302085", 
+  "modified": "2018-10-17 11:11:30.203472", 
   "name": "Portal Settings"
  }
 ]
