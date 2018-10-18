@@ -15,7 +15,7 @@
     "role": "Customer", 
     "route": "/quotations", 
     "target": null, 
-    "title": "Purchase Orders"
+    "title": "Purchase Requests"
    }, 
    {
     "enabled": 1, 
@@ -200,7 +200,7 @@
     "title": "Newsletter"
    }
   ], 
-  "modified": "2018-10-17 15:51:07.676072", 
+  "modified": "2018-10-18 09:44:00.922860", 
   "name": "Portal Settings"
  }
 ]
