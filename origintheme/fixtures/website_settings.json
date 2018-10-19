@@ -14,13 +14,21 @@
   "head_html": null, 
   "hide_footer_signup": 0, 
   "home_page": "products", 
-  "modified": "2018-10-16 10:03:27.379596", 
+  "modified": "2018-10-19 14:36:46.269986", 
   "name": "Website Settings", 
   "navbar_search": 0, 
   "robots_txt": null, 
   "subdomain": null, 
   "title_prefix": null, 
-  "top_bar_items": [], 
+  "top_bar_items": [
+   {
+    "label": "Products", 
+    "parent_label": null, 
+    "right": 1, 
+    "target": "", 
+    "url": "/products"
+   }
+  ], 
   "website_theme": "Origin Theme", 
   "website_theme_image_link": null
  }

@@ -3,14 +3,6 @@
   "custom_menu": [
    {
     "enabled": 1, 
-    "reference_doctype": null, 
-    "role": "Customer", 
-    "route": "/products", 
-    "target": null, 
-    "title": "Products"
-   }, 
-   {
-    "enabled": 1, 
     "reference_doctype": "Quotation", 
     "role": "Customer", 
     "route": "/quotations", 
@@ -200,7 +192,7 @@
     "title": "Newsletter"
    }
   ], 
-  "modified": "2018-10-18 09:44:00.922860", 
+  "modified": "2018-10-19 14:36:04.974594", 
   "name": "Portal Settings"
  }
 ]
