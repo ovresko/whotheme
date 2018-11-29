@@ -105,7 +105,7 @@ header .container {
     padding: 0px 15px 0 0;
     min-height: 50px;
     border: 0px solid white;
-    box-shadow: inset 0px -5px 0px 0px #86754d;
+    box-shadow: inset 0px -5px 0px 0px #3F51B5;
 }
 @media (min-width: 768px) {
     .navbar-nav {
@@ -151,7 +151,7 @@ header .container {
     top: 3px;
     font-size: 12px;
     font-weight: 400;
-    color: #86754e;
+    color: #303F9F;
     padding: 0px;
 }
 
@@ -254,7 +254,7 @@ header .dropdown-help {
 }
 
 .navbar .navbar-search-icon {
-    color: #86754e;
+    color: #303F9F;
     font-size: inherit;
     position: relative;
     right: 30px;
@@ -530,8 +530,8 @@ h6.uppercase,
 
 .btn-primary {
     color: white;
-    background-color: #86754d;
-    border-color: #86754d;
+    background-color: #3F51B5;
+    border-color: #3F51B5;
 }
 
 .btn-primary:hover,
@@ -541,7 +541,7 @@ h6.uppercase,
 .btn-primary.active,
 .open>.dropdown-toggle.btn-primary {
     color: #fff;
-    background-color: #af9865;
+    background-color: #303F9F;
     border-color: transparent;
 
 }
@@ -635,7 +635,7 @@ input[type="checkbox"]:before {
 input[type="checkbox"]:checked:before {
     content: '\f14a';
     font-size: 13px;
-    color: #edc35f;
+    color: #7986CB;
   }
 
 /* .inline-graph {

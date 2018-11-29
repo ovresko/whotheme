@@ -358,12 +358,12 @@ li.user-progress .progress-chart {
 }
 
 .main-sidebar .sidebar-menu>li:hover {
-  background-color: #7b6c41;
+  background-color: #3F51B5;
   border-radius: 0 25px 25px 0;
 }
 
 .main-sidebar .sidebar-menu>li:active {
-  background-color: #7b6c41;
+  background-color: #3F51B5;
   border-radius: 0 25px 25px 0;
 }
 

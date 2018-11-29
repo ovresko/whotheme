@@ -10,8 +10,8 @@
   --originLightGrayHover: "#eaeaea";
   --originGray: "#828282";
   --originGrayHover: "#828282";
-  --originGold: "#86754d";
-  --originGoldHover: "#86754d";
+  --originGold: "#3F51B5";
+  --originGoldHover: "#3F51B5";
   --originYellow: "#ffec40";
   --originYellowHover: "#ffec40";
   --originGreen: "#17e58c";
@@ -94,7 +94,7 @@
   background: #2f3333;
 }
 .skin-origin .main-sidebar .sidebar-menu > li > a:focus {
-  background-color: #7b6c41;
+  background-color: #3F51B5;
   border-radius: 0 25px 25px 0;
   
 }
