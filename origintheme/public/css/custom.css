@@ -151,7 +151,7 @@ header .container {
     top: 3px;
     font-size: 12px;
     font-weight: 400;
-    color: #303F9F;
+    color: #5C6BC0;
     padding: 0px;
 }
 
@@ -254,7 +254,7 @@ header .dropdown-help {
 }
 
 .navbar .navbar-search-icon {
-    color: #303F9F;
+    color: #5C6BC0;
     font-size: inherit;
     position: relative;
     right: 30px;
@@ -541,7 +541,7 @@ h6.uppercase,
 .btn-primary.active,
 .open>.dropdown-toggle.btn-primary {
     color: #fff;
-    background-color: #303F9F;
+    background-color: #5C6BC0;
     border-color: transparent;
 
 }
