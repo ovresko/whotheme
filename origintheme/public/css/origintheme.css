@@ -529,7 +529,7 @@ li.user-progress .progress-chart {
   display: block !important;
   position: absolute;
   left: 25px;
-  background: rgba(123, 108, 64, 1.0);
+  background: rgba(63,81,181 ,1);
   z-index: 1000;
   border-radius: 0 25px 25px 0;
   text-align: left;
