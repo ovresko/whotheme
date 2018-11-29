@@ -161,6 +161,6 @@ frappe.templates["sidebar-toggle"] = '<a href="#" class="sidebar-toggle hidden-i
 +	        '<span class="sr-only">Toggle navigation</span>'
 +	    '</a>';
 
-frappe.templates["company-name"] = '<span class="navbar-company">origin admin</span>';
+frappe.templates["company-name"] = '<span class="navbar-company">MON VEHICULE</span>';
 frappe.templates["material-icons"] = '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">';
 frappe.templates["poppins"] = '<link href="https://fonts.googleapis.com/css?family=Poppins:300,400" rel="stylesheet">';
