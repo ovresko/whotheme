@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\origintheme",
+    "\\origintheme\\config",
+    "\\origintheme\\fixtures",
+    "\\origintheme\\origin_theme",
+    "\\origintheme\\origin_theme\\custom",
+    "\\origintheme\\origin_theme\\doctype",
+    "\\origintheme\\origin_theme\\doctype\\custom_menu",
+    "\\origintheme\\origin_theme\\doctype\\menu_item",
+    "\\origintheme\\origin_theme\\www"
+  ],
+  "PreviewInSolutionExplorer": false
+}

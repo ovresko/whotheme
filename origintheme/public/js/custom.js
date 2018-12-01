@@ -28,11 +28,11 @@ $(document).ready(function() {
 
 	redirect_desk();
 
-	function handle_mobile() {
-		if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-			window.location.href = '/me';
-		}
-	}
+	//function handle_mobile() {
+	//	if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	//		window.location.href = '/me';
+	//	}
+	//}
 
 	handle_mobile();
 	$(window).bind('hashchange', function() {
