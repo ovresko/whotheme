@@ -26,6 +26,10 @@ $(document).ready(function() {
 
 	// console.log("Current user",frappe.utils.user);
 
+    if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return ;
+    }
+
 	redirect_desk();
 
 	function handle_mobile() {
